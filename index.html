@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Air Indea Virtual | Infinite Flight virtual airline</title>
+<meta name="description" content="Air Indea Virtual is a community-run Infinite Flight virtual airline flying Indian skies and beyond from Delhi, Bengaluru and Mumbai.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#fbf6ee;--ink:#2a0c2e;--muted:#6b5470;--line:#e3d6c6;--accent:#a3102a;--gold:#8a5e0d;--btn:#2a0c2e;--btnink:#fbf6ee;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b0620;--ink:#f6ecdd;--muted:#bfa9c4;--line:#3a1a40;--accent:#ff6b7d;--gold:#e0b25a;--btn:#e0b25a;--btnink:#1b0620;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b0620;--ink:#f6ecdd;--muted:#bfa9c4;--line:#3a1a40;--accent:#ff6b7d;--gold:#e0b25a;--btn:#e0b25a;--btnink:#1b0620;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 "DM Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+.hero{background:#2a0a2e;color:#f6ecdd;overflow:hidden}
+nav{display:flex;align-items:center;gap:1rem;padding:1.1rem 0}
+nav .brand{display:flex;align-items:center;gap:.7rem;font:800 1.1rem "Bricolage Grotesque",sans-serif;text-decoration:none;margin-right:auto}
+nav .mark{width:2.6rem;height:2.6rem}
+nav a.link{text-decoration:none;font-weight:500;opacity:.85;display:none}
+@media(min-width:44rem){nav a.link{display:inline}}
+.btn{display:inline-block;background:#e0b25a;color:#2a0a2e;font-weight:700;padding:.8rem 1.4rem;border-radius:2rem;text-decoration:none}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+.btn.small{padding:.5rem 1.1rem}
+.hero h1{font-size:clamp(2.8rem,12vw,6rem);font-weight:800;letter-spacing:-.02em;margin-top:2.2rem}
+.hero h1 span{display:block;color:#e0b25a}
+.hero p.lead{max-width:34rem;font-size:1.2rem;opacity:.9;margin:1.4rem 0 1.8rem}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.sun{display:block;width:100%;max-width:34rem;margin:2.5rem auto 0}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,6vw,2.8rem);font-weight:800;margin-bottom:1rem}
+p{max-width:40rem;margin:.6rem 0}
+.muted{color:var(--muted)}
+.hubs{list-style:none;margin:1.5rem 0 0;padding:0}
+.hubs li{display:flex;gap:1.2rem;align-items:baseline;padding:1rem 0;border-top:1px solid var(--line)}
+.hubs b{font:800 clamp(1.8rem,7vw,2.6rem)/1 "Bricolage Grotesque",sans-serif;color:var(--accent);min-width:5.5rem}
+.hubs span{font-size:1.05rem}
+ol.steps{list-style:none;counter-reset:s;margin:1.5rem 0 0;padding:0;border-left:3px solid var(--gold)}
+ol.steps li{counter-increment:s;padding:0 0 1.5rem 1.5rem;position:relative;max-width:40rem}
+ol.steps li::before{content:counter(s);position:absolute;left:-1.1rem;top:-.1rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--gold);color:var(--bg);font-weight:700;display:grid;place-items:center;font-size:.9rem}
+ol.steps b{display:block;font-size:1.15rem}
+.two{display:grid;gap:2rem;margin-top:1.2rem}
+@media(min-width:44rem){.two{grid-template-columns:1fr 1fr}}
+.two h3{font-size:1.5rem;margin-bottom:.4rem}
+.cta{text-align:center}
+.cta p{margin-left:auto;margin-right:auto}
+.cta .btn{background:var(--btn);color:var(--btnink)}
+.cta .btn.ghost{background:transparent;color:var(--ink)}
+.cta .ctas{justify-content:center;margin-top:1.4rem}
+footer{padding:2rem 0 3rem;font-size:.92rem;color:var(--muted)}
+footer p{max-width:44rem}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<nav>
+<a class="brand" href="#top"><svg class="mark" viewBox="0 0 42 42" width="42" height="42" role="img" aria-label="AIV logo"><rect width="42" height="42" rx="10" fill="#3a0d3f"/><path d="M13 27a8 8 0 0 1 16 0z" fill="#e0b25a"/><path d="M21 14v4M13 16l2 3M29 16l-2 3" stroke="#e0b25a" stroke-width="2" stroke-linecap="round"/><path d="M3 27c4-9 12-11 16-6-5-1-11 0-16 6z" fill="#c8102e"/><path d="M3 27c4-9 12-11 16-6-5-1-11 0-16 6z" fill="#c8102e" transform="translate(42 0) scale(-1 1)"/></svg>Air Indea Virtual</a>
+<a class="link" href="#hubs">Hubs</a>
+<a class="link" href="#join">How to join</a>
+<a class="link" href="#fleet">Fleet and ranks</a>
+<a class="btn small" href="https://waypoint-live.app/va/air-india-virtual/apply">Apply</a>
+</nav>
+<h1 id="top">Fly Indian.<span>Fly Beyond.</span></h1>
+<p class="lead">A community-run virtual airline for Infinite Flight pilots. Realistic operations from Delhi, Bengaluru and Mumbai, with a friendly crew and regular events.</p>
+<div class="ctas">
+<a class="btn" href="https://waypoint-live.app/va/air-india-virtual/apply">Apply to fly</a>
+</div>
+<svg class="sun" id="sun" viewBox="0 0 400 200" role="img" aria-label="Sunrise between two wings"></svg>
+</div>
+</header>
+
+<main>
+<section id="about"><div class="wrap">
+<h2>About us</h2>
+<p>Air Indea Virtual is built for pilots who like flying India’s busiest routes the way real crews do: proper procedures, live ATC and honest PIREPs.</p>
+<p>Whether you’re new to Infinite Flight or already a regular, there’s a seat for you. We keep things friendly, active and fair.</p>
+</div></section>
+
+<section id="hubs"><div class="wrap">
+<h2>Our hubs</h2>
+<p class="muted">Start your flights from any of our three hubs.</p>
+<ul class="hubs">
+<li><b>VIDP</b><span>Delhi, Indira Gandhi International</span></li>
+<li><b>VOBL</b><span>Bengaluru, Kempegowda International</span></li>
+<li><b>VABB</b><span>Mumbai, Chhatrapati Shivaji Maharaj International</span></li>
+</ul>
+</div></section>
+
+<section id="join"><div class="wrap">
+<h2>How to join</h2>
+<ol class="steps">
+<li><b>Apply with your Infinite Flight account</b>Sign in on our application page. We check the account you actually fly with.</li>
+<li><b>Answer the knowledge questions</b>A short quiz on airports, squawk codes, speeds and approaches.</li>
+<li><b>Wait for staff review</b>Our team reviews every application and replies with a decision.</li>
+<li><b>Get your Discord invite</b>Accepted pilots get a welcome message with a private invite to meet the crew.</li>
+</ol>
+</div></section>
+
+<section id="fleet"><div class="wrap">
+<h2>Fleet and ranks</h2>
+<div class="two">
+<div><h3>Fleet</h3><p class="muted">The full aircraft list is in the crew centre. Pilots see every route and aircraft there once they join.</p></div>
+<div><h3>Ranks</h3><p class="muted">Fly approved flights to earn hours and climb from Junior First Officer upward. The full rank ladder is in the crew centre.</p></div>
+</div>
+</div></section>
+
+<section class="cta" id="apply"><div class="wrap">
+<h2>Ready for takeoff?</h2>
+<p>Apply in a few minutes. Accepted pilots get a private Discord invite.</p>
+<div class="ctas">
+<a class="btn" href="https://waypoint-live.app/va/air-india-virtual/apply">Apply now</a>
+<a class="btn ghost" href="https://waypoint-live.app/va/air-india-virtual">View our Waypoint page</a>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<p>Air Indea Virtual is an independent virtual airline for flight simulation only. It is not affiliated with, endorsed by or connected to Air India or any real airline.</p>
+<p>© 2026 Air Indea Virtual</p>
+</div></footer>
+
+<script>
+(function(){
+var s=document.getElementById('sun'),ns='http://www.w3.org/2000/svg',h='';
+for(var a=-165;a<=-15;a+=15){
+var r=a*Math.PI/180,x1=200+88*Math.cos(r),y1=200+88*Math.sin(r),x2=200+170*Math.cos(r),y2=200+170*Math.sin(r);
+h+='<line x1="'+x1.toFixed(1)+
