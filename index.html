@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Air Indea Virtual | Infinite Flight virtual airline</title>
+<meta name="description" content="Air Indea Virtual is a community-run Infinite Flight virtual airline flying Indian skies and beyond from Delhi, Bengaluru and Mumbai.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#fbf6ee;--ink:#2a0c2e;--muted:#6b5470;--line:#e3d6c6;--accent:#a3102a;--gold:#8a5e0d;--btn:#2a0c2e;--btnink:#fbf6ee;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b0620;--ink:#f6ecdd;--muted:#bfa9c4;--line:#3a1a40;--accent:#ff6b7d;--gold:#e0b25a;--btn:#e0b25a;--btnink:#1b0620;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b0620;--ink:#f6ecdd;--muted:#bfa9c4;--line:#3a1a40;--accent:#ff6b7d;--gold:#e0b25a;--btn:#e0b25a;--btnink:#1b0620;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 "DM Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+.hero{background:#2a0a2e;color:#f6ecdd;overflow:hidden}
+nav{display:flex;align-items:center;gap:1rem;padding:1.1rem 0}
+nav .brand{display:flex;align-items:center;gap:.7rem;font:800 1.1rem "Bricolage Grotesque",sans-serif;text-decoration:none;margin-right:auto}
+nav img{width:2.6rem;height:2.6rem;border-radius:.7rem}
+nav a.link{text-decoration:none;font-weight:500;opacity:.85;display:none}
+@media(min-width:44rem){nav a.link{display:inline}}
+.btn{display:inline-block;background:#e0b25a;color:#2a0a2e;font-weight:700;padding:.8rem 1.4rem;border-radius:2rem;text-decoration:none}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+.btn.small{padding:.5rem 1.1rem}
+.hero h1{font-size:clamp(2.8rem,12vw,6rem);font-weight:800;letter-spacing:-.02em;margin-top:2.2rem}
+.hero h1 span{display:block;color:#e0b25a}
+.hero p.lead{max-width:34rem;font-size:1.2rem;opacity:.9;margin:1.4rem 0 1.8rem}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.sun{display:block;width:100%;max-width:34rem;margin:2.5rem auto 0}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,6vw,2.8rem);font-weight:800;margin-bottom:1rem}
+p{max-width:40rem;margin:.6rem 0}
+.muted{color:var(--muted)}
+.hubs{list-style:none;margin:1.5rem 0 0;padding:0}
+.hubs li{display:flex;gap:1.2rem;align-items:baseline;padding:1rem 0;border-top:1px solid var(--line)}
+.hubs b{font:800 clamp(1.8rem,7vw,2.6rem)/1 "Bricolage Grotesque",sans-serif;color:var(--accent);min-width:5.5rem}
+.hubs span{font-size:1.05rem}
+ol.steps{list-style:none;counter-reset:s;margin:1.5rem 0 0;padding:0;border-left:3px solid var(--gold)}
+ol.steps li{counter-increment:s;padding:0 0 1.5rem 1.5rem;position:relative;max-width:40rem}
+ol.steps li::before{content:counter(s);position:absolute;left:-1.1rem;top:-.1rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--gold);color:var(--bg);font-weight:700;display:grid;place-items:center;font-size:.9rem}
+ol.steps b{display:block;font-size:1.15rem}
+.two{display:grid;gap:2rem;margin-top:1.2rem}
+@media(min-width:44rem){.two{grid-template-columns:1fr 1fr}}
+.two h3{font-size:1.5rem;margin-bottom:.4rem}
+.cta{text-align:center}
+.cta p{margin-left:auto;margin-right:auto}
+.cta .btn{background:var(--btn);color:var(--btnink)}
+.cta .btn.ghost{background:transparent;color:var(--ink)}
+.cta .ctas{justify-content:center;margin-top:1.4rem}
+footer{padding:2rem 0 3rem;font-size:.92rem;color:var(--muted)}
+footer p{max-width:44rem}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<nav>
+<a class="brand" href="#top"><img src="data:image/jpeg;base64,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" alt="AIV logo" width="42" height="42">Air Indea Virtual</a>
+<a class="link" href="#hubs">Hubs</a>
+<a class="link" href="#join">How to join</a>
+<a class="link" href="#fleet">Fleet and ranks</a>
+<a class="btn small" href="https://waypoint-live.app/va/air-india-virtual/apply">Apply</a>
+</nav>
+<h1 id="top">Fly Indian.<span>Fly Beyond.</span></h1>
+<p class="lead">A community-run virtual airline for Infinite Flight pilots. Realistic operations from Delhi, Bengaluru and Mumbai, with a friendly crew and regular events.</p>
+<div class="ctas">
+<a class="btn" href="https://waypoint-live.app/va/air-india-virtual/apply">Apply to fly</a>
+</div>
+<svg class="sun" id="sun" viewBox="0 0 400 200" role="img" aria-label="Sunrise between two wings"></svg>
+</div>
+</header>
+
+<main>
+<section id="about"><div class="wrap">
+<h2>About us</h2>
+<p>Air Indea Virtual is built for pilots who like flying India’s busiest routes the way real crews do: proper procedures, live ATC and honest PIREPs.</p>
+<p>Whether you’re new to Infinite Flight or already a regular, there’s a seat for you. We keep things friendly, active and fair.</p>
+</div></section>
+
+<section id="hubs"><div class="wrap">
+<h2>Our hubs</h2>
+<p class="muted">Start your flights from any of our three hubs.</p>
+<ul class="hubs">
+<li><b>VIDP</b><span>Delhi, Indira Gandhi International</span></li>
+<li><b>VOBL</b><span>Bengaluru, Kempegowda International</span></li>
+<li><b>VABB</b><span>Mumbai, Chhatrapati Shivaji Maharaj International</span></li>
+</ul>
+</div></section>
+
+<section id="join"><div class="wrap">
+<h2>How to join</h2>
+<ol class="steps">
+<li><b>Apply with your Infinite Flight account</b>Sign in on our application page. We check the account you actually fly with.</li>
+<li><b>Answer the knowledge questions</b>A short quiz on airports, squawk codes, speeds and approaches.</li>
+<li><b>Wait for staff review</b>Our team reviews every application and replies with a decision.</li>
+<li><b>Get your Discord invite</b>Accepted pilots get a welcome message with a private invite to meet the crew.</li>
+</ol>
+</div></section>
+
+<section id="fleet"><div class="wrap">
+<h2>Fleet and ranks</h2>
+<div class="two">
+<div><h3>Fleet</h3><p class="muted">The full aircraft list is in the crew centre. Pilots see every route and aircraft there once they join.</p></div>
+<div><h3>Ranks</h3><p class="muted">Fly approved flights to earn hours and climb from Junior First Officer upward. The full rank ladder is in the crew centre.</p></div>
+</div>
+</div></section>
+
+<section class="cta" id="apply"><div class="wrap">
+<h2>Ready for takeoff?</h2>
+<p>Apply in a few minutes. Accepted pilots get a private Discord invite.</p>
+<div class="ctas">
+<a class="btn" href="https://waypoint-live.app/va/air-india-virtual/apply">Apply now</a>
+<a class="btn ghost" href="https://waypoint-live.app/va/air-india-virtual">View our Waypoint page</a>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<p>Air Indea Virtual is an independent virtual airline for flight simulation only. It is not affiliated with, endorsed by or connected to Air India or any real airline.</p>
+<p>© 2026 Air Indea Virtual</p>
+</div></footer>
+
+<script>
+(function(){
+var s=document.getElementById('sun'),ns='http://www.w3.org/2000/svg',h='';
+for(var a=-165;a<=-15;a+=15){
+var r=a*Math.PI/180,x1=200+88*Math.cos(r),y1=200+88*Math.sin(r),x2=200+170*Math.cos(r),y2=200+170*Math.sin(r);
+h+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" stroke="#e0b25a" stroke-width="9" stroke-linecap="round"/>';
+}
+h+='<path d="M130 200A70 70 0 0 1 270 200Z" fill="#e0b25a"/>';
+var w='M10 196C50 120 130 105 178 150C132 142 70 150 10 196Z';
+h+='<path d="'+w+'" fill="#c8102e"/><path d="'+w+'" fill="#c8102e" transform="translate(400 0) scale(-1 1)"/>';
+s.innerHTML=h;
+})();
+</script>
+</body>
+</html>
